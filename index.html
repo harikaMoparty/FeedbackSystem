@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+    <div class="container-fluid p-0">
+      <h1 class="text-center text-white bg-dark mb-2">Feedback System</h1>
+      <div>
+        <h3 id="star1">*</h3>
+        <h3 id="star2">**</h3>
+        <h3 id="star3">***</h3>
+        <h3 id="star4">****</h3>
+        <h3 id="star5">*****</h3>
+      </div>
+      <form class="row g-3 mt-4">
+        <div class="col-md-4">
+          <label for="name" class="form-label">Enter Your Name:</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+
+        <div class="col-md-4">
+          <label for="mySelect" class="form-label">Choose a Rating :</label>
+          <select id="mySelect" class="form-select">
+            <option disabled selected value>0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="col-md-4" style="margin-top: 45px">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            value = "add"
+            onclick="handleEvent(event)"
+          >Submit</button>
+        </div>
+      </form>
+      <ul id="list" class="mt-4 p-2">ALL FEEDBACKS:</ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
